@@ -33,6 +33,9 @@ $ulang = true;
     if ($toko_baju[$pilih]["harga"] > 100000){
         $total = 0.9 * $toko_baju[$pilih]["harga"];
         echo "Harga Baju setelah diskon: $total";
+    } else {
+        $total = $toko_baju[$pilih]["harga"];
+        echo "Harga Baju: $total";
     }
     
 
