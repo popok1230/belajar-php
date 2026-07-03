@@ -5,6 +5,9 @@ $toko_baju = [
     ["nama" => "Jaket Denim Blue", "harga" => 195000, "stok" => 0]
 ];
 
+$diskon = 0.9;
+$diskonan = "10%";
+
 $ulang = true;
 
 
@@ -31,11 +34,19 @@ $ulang = true;
     }
 
     if ($toko_baju[$pilih]["harga"] > 100000){
-        $total = 0.9 * $toko_baju[$pilih]["harga"];
-        echo "Harga Baju setelah diskon: $total";
+        $total = $diskon * $toko_baju[$pilih]["harga"];
     } else {
         $total = $toko_baju[$pilih]["harga"];
-        echo "Harga Baju: $total";
     }
+
+    #struk
+
+    if ($total < $toko_baju[$pilih]["harga"]){
+        echo "barang ini di diskon $diskonan total menjadi: $total";
+    } else {
+        echo "Total barang: $total";
+    }
+
+
     
 
